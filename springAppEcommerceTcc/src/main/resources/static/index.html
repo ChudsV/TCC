@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chu Ecommerce - Página Inicial</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Adicione seus estilos personalizados aqui */
+        body {
+          background-color: #f8f9fa;
+          color: #343a40; /* Alterando a cor do texto para preto */
+        }
+        .navbar {
+          background-color: #e8e8e8 !important; /* Alterando a cor de fundo da barra de navegação */
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+          color: #000000 !important; /* Alterando a cor do texto da barra de navegação para preto */
+        }
+        .navbar-toggler-icon {
+          background-color: #000000; /* Alterando a cor do ícone do botão de navegação para preto */
+        }
+        .list-group-item {
+          background-color: #ffffff;
+        }
+        .card {
+          background-color: #ffffff;
+          border: none;
+        }
+        .card-title a {
+          color: #343a40;
+        }
+        .card-footer {
+          background-color: #f8f9fa;
+          border-top: none;
+        }
+        footer {
+          background-color: #007bff;
+          color: #ffffff;
+          padding: 20px 0;
+        }
+        .custom-padding-top {
+          padding-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navegação -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Chu Ecommerce</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Início <span class="sr-only">(atual)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Loja</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contato</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home.html"><i class="fas fa-user"></i> Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Conteúdo da Página -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-3 custom-padding-top">
+            <div class="list-group">
+                <a href="#" class="list-group-item">Camisetas</a>
+                <a href="#" class="list-group-item">Camisas</a>
+                <a href="#" class="list-group-item">Moletons</a>
+            </div>
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+            <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel" style="height: auto;"> <!-- Definindo a altura como automática -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="https://i.ibb.co/Rv3BC1y/S-A-L-E.png" alt="S-A-L-E" alt="Primeiro slide">
+                    </div>
+                    <!-- <div class="carousel-item">
+                         <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Segundo slide">
+                     </div>
+                     <div class="carousel-item">
+                         <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Terceiro slide">
+                     </div>-->
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
+            </div>
+
+            <div class="row">
+                <!-- Cartões de Produto -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="https://bawclothing.vtexassets.com/arquivos/ids/329896/0084575046_02.jpg?v=638483558930400000" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">CAMISETA MC REGULAR FLOWER</a>
+                            </h4>
+                            <h5>R$ 159,00</h5>
+                            <p class="card-text">5x R$ 31,80</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-4 -->
+
+                <!-- Cartões de Produto -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="https://bawclothing.vtexassets.com/arquivos/ids/330073/0084576855_02.jpg?v=638488870599500000" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">CAMISETA MC REGULAR STAR</a>
+                            </h4>
+                            <h5>R$ 159,00</h5>
+                            <p class="card-text">5x R$ 31,80</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">&#9733; &#9733; &#9733; &#9734; &#9734;</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-4 -->
+
+                <!-- Cartões de Produto -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="https://bawclothing.vtexassets.com/arquivos/ids/282835/0084581042_02.jpg?v=638464750921900000" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">MOLETOM HOODIE SHERPA FLOWER</a>
+                            </h4>
+                            <h5>R$ 499,00</h5>
+                            <p class="card-text">10x R$ 49,90</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-4 -->
+
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+
+    <!-- Rodapé -->
+    <footer class="py-5">
+        <div class="container text-center">
+            <p class="m-0">Direitos Autorais &copy; 2024 Chu Ecommerce</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+</body>
+</html>

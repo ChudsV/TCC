@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Chu Soluções - Home Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <!-- Carregar jQuery -->
+    <style>
+        /* Aplicando layout Flex para manter o footer no rodapé */
+        body, html {
+          height: 100%; /* Garante que a página ocupe a altura total */
+        }
+        .wrapper {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh; /* Altura mínima para empurrar o footer para baixo */
+        }
+        .content {
+          flex: 1; /* Preenche o espaço entre o header e o footer */
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Chu Soluções</a>
+        <div class="ml-auto text-white" id="usuario-logado"> <!-- Texto em branco -->
+            Carregando...
+        </div>
+    </nav>
+
+
+    <!-- Header -->
+    <header class="jumbotron text-center content"> <!-- Parte do conteúdo principal -->
+        <h1>Bem-vindo à Chu Soluções</h1>
+        <p>Explore nossos serviços para impulsionar o seu negócio</p>
+    </header>
+
+    <!-- Grid de Serviços -->
+    <div class="container content"> <!-- Parte do conteúdo principal -->
+        <div class="row">
+            <!-- Primeiro serviço -->
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Consultoria</h5>
+                        <p class="card-text">Oferecemos consultoria especializada para ajudar a sua empresa a crescer.</p>
+                        <a href="#" class="btn btn-primary">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segundo serviço -->
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Desenvolvimento de Software</h5>
+                        <p class="card-text">Criamos soluções sob medida para as suas necessidades.</p>
+                        <a href="#" class="btn btn-primary">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terceiro serviço -->
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Treinamento</h5>
+                        <p class="card-text">Oferecemos treinamento para capacitar sua equipe em habilidades técnicas.</p>
+                        <a href="#" class="btn btn-primary">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serviço de Administração (oculto por padrão) -->
+            <div class="col-md-4" id="admin-service" style="display: none;padding-top: 30px;">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Administração</h5>
+                        <p class="card-text">Gerencie as configurações e usuários da sua conta.</p>
+                        <a href="#" class="btn btn-primary">Acessar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Chu Soluções. Todos os direitos reservados.</p>
+    </footer>
+</div>
+<!-- Script para buscar o nome do usuário logado e verificar a role 'admin' -->
+<script>
+    $(document).ready(function() {
+      $.ajax({
+        url: '/user', // Endpoint para obter informações do usuário logado
+        method: 'GET',
+        dataType: 'json', // Esperar uma resposta JSON
+        success: function(data) {
+          if (data && data.name) {
+            $('#usuario-logado').html('Olá, <strong>' + data.name + '</strong>!');
+            // Verificar se o usuário tem a role 'admin' e mostrar o serviço de administração
+            if (data.roles && data.roles.includes('admin')) {
+              $('#admin-service').show();
+            }
+          } else {
+            $('#usuario-logado').html('Usuário não encontrado');
+          }
+        },
+        error: function(err) {
+          console.error('Erro ao buscar usuário:', err);
+          $('#usuario-logado').html('Erro ao buscar usuário');
+        }
+      });
+    });
+</script>
+
+
+</body>
+</html>
